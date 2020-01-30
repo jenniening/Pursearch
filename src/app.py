@@ -286,5 +286,5 @@ def predict():
 if __name__ == '__main__':
     print("Loading PyTorch model and Flask starting server ...")
     print("Please wait until server has fully started")
-    app.run()
+    app.run(host="0.0.0.0", port=80, debug=False)
     ### Command to run this: FLASK_ENV=development FLASK_APP=app.py FLASK_DEBUG=0 
