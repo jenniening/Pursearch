@@ -231,22 +231,30 @@ def predict():
     if request.method == 'POST':
         if "file" not in request.files:
             return redirect(request.url)
-        file = request.files['file']
-        if not file:
-            return "No handbag detected\n"
+        test = request.form["test"]
+        if test == "test":
+            file = open(os.path.join(app.config['UPLOAD_FOLDER'], "test.jpg"), 'rb')
+            filename = "test.jpg"
+        else:
+            file = request.files['file']
+            if not file:
+                return "No handbag detected\n"
 
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-            #input_name = 'http://127.0.0.1:5000/uploads/' + filename
-            file.stream.seek(0)
-            img_bytes = file.read()
-
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+                #input_name = 'http://127.0.0.1:5000/uploads/' + filename
+                file.stream.seek(0)
+                
+        img_bytes = file.read()
         option = request.form.get('options')
         if option == "yes":
             infile = crop_image(img_bytes, detection_model)
+            infile.save(os.path.join(app.config["UPLOAD_FOLDER"], filename.split(".")[0] + "_crop.jpg"))
+            crop_filename = filename.split(".")[0] + "_crop.jpg"
         else:
             infile = Image.open(io.BytesIO(img_bytes))
+            crop_filename = filename
         if infile == False:
             return "No handbag detected\n"
         
@@ -262,26 +270,10 @@ def predict():
         Top1_brand=Top1[2], Top2_brand=Top2[2], Top3_brand=Top3[2],
         Top1_price=Top1[3], Top2_price=Top2[3], Top3_price=Top3[3],
         Top1_img=Top1[4],Top2_img=Top2[4], Top3_img=Top3[4],
-        filename=filename)
+        filename=filename,
+        crop_filename=crop_filename)
     return render_template('index.html')
 
-
-#def upload_file():
-#    if request.method == 'POST':
-#        # check if the post request has the file part
-#        if 'file' not in request.files:
-#            flash('No file part')
-#            return redirect(request.url)
-#        file = request.files['file']
-        # if user does not select file, browser also
-        # submit a empty part without filename
-#        if file.filename == '':
-#            flash('No selected file')
-#            return redirect(request.url)
-        #if file and allowed_file(file.filename):
-            #filename = secure_filename(file.filename)
-#        filename = file.filename
-#        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
 if __name__ == '__main__':
     print("Loading PyTorch model and Flask starting server ...")
