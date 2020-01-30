@@ -91,7 +91,7 @@ def run_inference_for_single_image(model, image):
     
     return output_dict
 
-def crop_image(name, path, outpath, show=True, save=True):
+def crop_image(name, path, outpath, model, show=True, save=True):
     """
     Based on the object detection results to crop the image.
     Here, we only focus on handbag (class: 31), only keep the handbag with highest probability 
@@ -119,7 +119,7 @@ def crop_image(name, path, outpath, show=True, save=True):
         image.show()
     width, hight = image.size
     image_np = np.array(image)
-    output_dict = run_inference_for_single_image(detection_model, image_np)
+    output_dict = run_inference_for_single_image(model, image_np)
     if 31 in output_dict["detection_classes"]:
         max_score =  max([output_dict["detection_scores"][idx] for idx, i in enumerate(output_dict["detection_classes"]) if i == 31])
         index = list(output_dict["detection_scores"]).index(max_score) 
@@ -203,7 +203,7 @@ if __name__ == "__main__":
         for i in range(number):
             name = str(i) + ".jpg"
             try:
-                if not crop_image(name, path, outpath, show=False):
+                if not crop_image(name, path, outpath, model=detection_model, show=False, save=True):
                     print(i)
             except:
                 print(i)
