@@ -21,11 +21,11 @@ total_brands = ['Louis Vuitton', 'Chanel', 'Coach', 'Michael Kors', 'Gucci', 'Lo
 brands = [total_brands[i] for i in [1,2,0,6,1,5,4,4,1,3,3,0,0,7,0,3,4,0,4]]
 names = ['2.55','F57842', 'alma','handbag','boy','classic','dionysus','ggmarmont','grandshoppingtote','jetsettote','mercertotebag',
 'neverfull','newwavechaintote','None','petiteboitechapeau','selmasatchel','sohodisco','speedy','sylvie']
-websites = ["https://www.chanel.com/us/fashion/p/AS0874B0228194305/small-2-55-handbag-patent-calfskin-black-metal/",
+websites = ["https://www.chanel.com/en_WW/fashion.html#search/2.55",
 "https://www.coach.com/",
 "https://us.louisvuitton.com/eng-us/search/alma",
 "None",
-"https://www.chanel.com/us/fashion/p/A91046Y09958N5024/large-shopping-bag-calfskin-silver-tone-metal/",
+"https://www.chanel.com/en_WW/fashion.html#search/BOY/",
 "https://us.longchamp.com/products/le-pliage/tote-bag-s/l2605089545",
 "https://www.gucci.com/us/en/st/capsule/dionysus-collection",
 "https://www.gucci.com/us/en/st/capsule/gg-marmont-collection",
