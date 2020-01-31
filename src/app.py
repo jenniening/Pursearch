@@ -250,15 +250,14 @@ def predict():
         option = request.form.get('options')
         if option == "yes":
             infile = crop_image(img_bytes, detection_model)
+            if infile == False:
+                return "No handbag detected\n"
             infile.save(os.path.join(app.config["UPLOAD_FOLDER"], filename.split(".")[0] + "_crop.jpg"))
             crop_filename = filename.split(".")[0] + "_crop.jpg"
         else:
             infile = Image.open(io.BytesIO(img_bytes))
             crop_filename = filename
-        if infile == False:
-            return "No handbag detected\n"
         
-
         brand, name, web, input_vector = get_prediction(image=infile, model=model, model_vector=model_vector)
         price_range = request.form.get("price")
         company = request.form.get("company")
