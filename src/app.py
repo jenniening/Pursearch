@@ -366,7 +366,7 @@ def predict():
         else:
             file = request.files['file']
             if not file:
-                return render_template("no_result.html")
+                return render_template("no_result.html", message="No Image Uploaded!")
 
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
@@ -381,7 +381,7 @@ def predict():
         if option == "yes":
             infile = crop_image(img_bytes, detection_model)
             if infile == False:
-                return render_template("no_result.html")
+                return render_template("no_result.html", message="Handbag Detection Failed, Retry with No Crop!")
             savename_crop = os.path.join(app.config["UPLOAD_FOLDER"], filename.split(".")[0] + "_crop.jpg")
             if os.path.exists(savename_crop):
                 os.remove(savename_crop)
@@ -406,7 +406,7 @@ def predict():
             filename=filename,
             crop_filename=crop_filename)
         else:
-            return render_template("no_result.html")
+            return render_template("no_result.html", message="No Handbag in Uploaded Image!")
     return render_template('index.html')
 
 @app.after_request
