@@ -46,6 +46,7 @@ websites = ["https://www.chanel.com/en_WW/fashion.html#search/2.55",
 
 UPLOAD_FOLDER = '../data/example'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 ALLOWED_EXTENSIONS = { 'png', 'jpg', 'jpeg'}
 tf.gfile = tf.io.gfile
 
@@ -407,6 +408,14 @@ def predict():
         else:
             return render_template("no_result.html")
     return render_template('index.html')
+
+@app.after_request
+def add_header(response):
+    # response.cache_control.no_store = True
+    response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '-1'
+    return response
 
 if __name__ == '__main__':
     print("Loading PyTorch model and Flask starting server ...")
