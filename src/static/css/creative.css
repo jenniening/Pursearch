@@ -198,8 +198,18 @@ pre {
 }
 
 figure {
-  margin: 0 0 1rem;
+  display: inline-block;
+  margin: 20px; /* adjust as needed */
 }
+
+figure img {
+  vertical-align: top;
+}
+figure figcaption {
+  font-size:0.9em;
+  text-align: center;
+}
+
 
 img {
   vertical-align: middle;

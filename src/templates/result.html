@@ -21,7 +21,7 @@
   <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
-  <link href="/static/css/creative.min.css" rel="stylesheet">
+  <link href="/static/css/creative.css" rel="stylesheet">
 
   <!--<link rel="stylesheet" href="/static/style.css">-->
 
@@ -81,15 +81,31 @@
 
         <!--<h1 class="h3 mb-3 font-weight-normal">Handbag Identifier</h1>-->
         <div class="container text-center">
-          <img src="{{url_for('uploaded_file', filename=filename)}}" style="border: 1px solid #000; max-width:128px; max-height:128px;"> > <img src="{{url_for('uploaded_file', filename=crop_filename)}}" style="border: 1px solid #000; max-width:100px; max-height:100px;">
+          </style>
+          <img src="{{url_for('uploaded_file', filename=filename)}}" style="border: 1px solid #000; max-width: 256px; max-height:256px;"> > <img src="{{url_for('uploaded_file', filename=crop_filename)}}" style="border: 1px solid #000; max-width:128px; max-height:128px;">
           <p></p>
-          <h5 class="mb-4"> Identification</h5>
-          <p>  Brand: {{ class_brand }}  <br>  Name: {{ class_name }}  <br> <a class="mb-4" href="{{ class_web }}" >  Official Website  </a>
+          <!--<h5 class="mb-4"> Identification</h5>-->
+          <p>  Name: {{ class_name }}  <br>  Brand: {{ class_brand }}  <br> <a class="mb-4" href="{{ class_web }}" >  Official Website  </a>
           <p></p>
-          <h5 class="mb-4"> Recommendation</h5>
-          <img src="{{Top1_img}}" width="128" height="128"><p class="mb-4">  Name: {{ Top1_product }}  <br> Brand: {{ Top1_brand}}  <br> Price: {{ Top1_price}}  <br> Sim: {{ Top1_sim }} <br><a href="{{ Top1_page}}">  Buy It <br></a></p>
-          <img src="{{Top2_img}}" width="128" height="128"><p class="mb-4">  Name: {{ Top2_product }}  <br> Brand: {{ Top2_brand}}  <br> Price: {{ Top2_price}}  <br> Sim: {{ Top2_sim }} <br><a href="{{ Top2_page}}">  Buy It <br></a></p>
-          <img src="{{Top3_img}}" width="128" height="128"><p class="mb-4">  Name: {{ Top3_product }}  <br> Brand: {{ Top3_brand}}  <br> Price: {{ Top3_price}}  <br> Sim: {{ Top3_sim }} <br><a href="{{ Top3_page}}">  Buy It <br></a></p>
+          <!--<h5 class="mb-4"> Recommendation</h5>-->
+          <figure>
+            <img src="{{Top1_img}}" style="border: 1px solid #000; max-width: 200px; max-height:200px;" />
+            <figcaption> {{ Top1_product }}  <br> Brand: {{ Top1_brand}}  <br> Price: {{ Top1_price}}  <br> Sim: {{ Top1_sim }} <br><a href="{{ Top1_page}}">  Buy It </a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="{{Top2_img}}" style="border: 1px solid #000; max-width: 200px; max-height:200px;" />
+            <figcaption> {{ Top2_product }}  <br> Brand: {{ Top2_brand}}  <br> Price: {{ Top2_price}}  <br> Sim: {{ Top2_sim }} <br><a href="{{ Top2_page}}">  Buy It </a>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="{{Top3_img}}" style="border: 1px solid #000; max-width: 200px; max-height:200px;" />
+            <figcaption> {{ Top3_product }}  <br> Brand: {{ Top3_brand}}  <br> Price: {{ Top3_price}}  <br> Sim: {{ Top3_sim }} <br><a href="{{ Top3_page}}">  Buy It </a>
+            </figcaption>
+          </figure>
+
           <!--<a class="mb-4" href="{{ class_web }}" > Official Website</a>-->
         </div>
     </form>
