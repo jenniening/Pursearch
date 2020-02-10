@@ -12,14 +12,11 @@ User can shoose different price and retailer for handbag recommendation.<br>
 ### Result Page:
 First row shows the input image and cropped handbag image. Handbag identification results and Top3 handbags based on similarity and users' choices have been provided. <br>
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pursearchresult.png" width="771" ></img>
-## 2. Pipeline 
+## 3. Pipeline 
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pipeline.png" width="771"></img>
-### Dataset Prepartion
-Dataset includes two parts: branded handbag dataset and retailer handbag dataset<br>
-#### Branded Handbag Dataset:
-5k+ images include 6 most popular handbag brands and 18 different styles of handbags have been scraped from Google search results.
-#### Retailer Handbag Dataset:
-The images and other information of 101 brands and 3k+ styles of handbags from Saks Fifth Avenue and Shein have been scraped. 
+### Data Source
+Dataset includes two parts: branded handbag dataset and retailer handbag dataset<br> 
+Branded handbag dataset includes 5k+ images with 6 most popular handbag brands and 18 different styles of handbags scrapped from **Google search results**. <br> Retailer handbag dataset includes images and other information of 101 brands and 3k+ styles of handbags scrapped from **Saks Fifth Avenue** and **Shein**. 
 ### Handbag Detection
 Here, I used faster_rcnn model trained by COCO dataset using Tensorflow to detect handbag from original image.
 ### Handbag Identification
