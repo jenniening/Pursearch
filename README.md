@@ -27,5 +27,9 @@ In terms of handbag identification, I built CNN model based on pretrained ResNet
 ```
 python train.py
 ```
-### Application 
+### Build Application
+I used Falsk to build application. 
+```
+python app.py
+```
 
