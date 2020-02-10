@@ -35,5 +35,10 @@ Application can be run locally by running following command:
 ```
 python app.py
 ```
+## 4. Tutorials
+[Handbag Detection](https://github.com/jenniening/Pursearch/blob/master/tutorials/Handbag_Detection.ipynb)
+[Handbag Identification](https://github.com/jenniening/Pursearch/blob/master/tutorials/Handbag_Classification.ipynb)
+[Handbag Recommendation](https://github.com/jenniening/Pursearch/blob/master/tutorials/Handbag_Recommendation.ipynb)
+
 
 
