@@ -3,7 +3,7 @@ Pursearch is a web app to help user find their dream handbag from unlabelled soc
 ### 1. Demo
 [Demo](http://Pursearch.com)
 
-![alt text](https://github.com/jenniening/Pursearch/blob/master/demo/Homepage.png, width="256")
+<img src="https://github.com/jenniening/Pursearch/blob/master/demo/Homepage.png" width="256">
 
 ![alt text](https://github.com/jenniening/Pursearch/blob/master/demo/Pipeline.png)
 ### 1. 
