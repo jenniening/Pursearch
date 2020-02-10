@@ -4,6 +4,7 @@ Pursearch is a web app to help user find their dream handbag from unlabelled soc
 The demo of Pursearch can be found in [Demo](http://Pursearch.com)<br>
 #### Home Page: 
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Homepage.png" width="771">
+<br>
 #### Input Page:
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Input.png" width="771">
 1. User can choose to crop image or not. Crop image is defualt and means that handbag will be first detected from input image. However, handbag detection might be failed, in that case, user should choose to use No Crop.
