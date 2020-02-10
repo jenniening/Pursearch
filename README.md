@@ -1,9 +1,8 @@
 # Pursearch
 Pursearch is a web app to help user find their dream handbag from unlabelled social media photos.<br>
 ## 1. Motivation
-**Handbag** is one of the most critical component of fashion market. Everyday, millions of people and celebrities share their fashion look on social media and people can always find the handbag they are interested in. However, the detailed information of handbag such as brand and style name aren't always shared. People have to ask and wait for the response for several hours or days, which is a big obstacle for potential handbag customers since many people will loss interests during this long waiting process. Because of this, I developed Pursearch, an image based handbag searching tool, to help users identify the detailed information of handbag and find the affordable similar handbags easily.
-## 1. Demo
-The demo of Pursearch can be found in [Demo](http://Pursearch.com)<br>
+**Handbag** is one of the most critical component of fashion market. Everyday, millions of people and celebrities share their fashion look on social media and people can always find the handbag they are interested in from these photos. However, the detailed information of handbags such as brands and style names aren't always shared. People have to ask and wait for the response for several hours or days, which is a big obstacle for potential handbag customers since many people will loss interests during this long waiting process. Because of this, I developed Pursearch, an image based handbag searching tool, to help users identify the detailed information of handbag and find the affordable similar handbags easily.
+## 2. Website (http://Pursearch.com)
 ### Home Page: 
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Homepage.png" width="771"></img>
 ### Input Page:
