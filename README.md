@@ -16,11 +16,10 @@ First row shows the input image and cropped handbag image. Handbag identificatio
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pipeline.png" width="771"></img>
 ### Data Source
 Dataset includes two parts: branded handbag dataset and retailer handbag dataset<br> 
-Branded handbag dataset includes 5k+ images with 6 most popular handbag brands and 18 different styles of handbags scrapped from **Google search results**. <br> Retailer handbag dataset includes images and other information of 101 brands and 3k+ styles of handbags scrapped from **Saks Fifth Avenue** and **Shein**. 
-### Handbag Detection
-Here, I used faster_rcnn model trained by COCO dataset using Tensorflow to detect handbag from original image.
-### Handbag Identification
-I built CNN model based on pretrained ResNet_50 and retrain all weights using branded handbag dataset and PyTorch. The vector of fully connected layer has been used as handbag vector.
+**Branded handbag dataset** includes 5k+ images with 6 most popular handbag brands and 18 different styles of handbags scrapped from **Google search results**. <br> **Retailer handbag dataset** includes images and other information of 101 brands and 3k+ styles of handbags scrapped from **Saks Fifth Avenue** and **Shein**. 
+### Handbag Detection and Identification
+Here, I used faster_rcnn model trained by COCO dataset using Tensorflow to detect handbag from original image.In terms of handbag identification, I built CNN model based on pretrained ResNet_50 and retrain all weights using branded handbag dataset and PyTorch. 
+
 ### Handbag Recommendation
 Cosine similarity between input handbag vector and retailer handbag vectors have been calculated. Based on user's price choice and retailer choice, similar handbag will be recommended. 
 
