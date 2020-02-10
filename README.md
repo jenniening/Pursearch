@@ -20,8 +20,12 @@ Dataset includes two parts: branded handbag dataset and retailer handbag dataset
 ### Training Models 
 All scripts are in ```src``` folder<br>
 To preprocess the data, I used faster_rcnn model trained by COCO dataset using Tensorflow to detect handbag from original image.<br>
-```python preprocessing.py```<br>
+```
+python preprocessing.py
+```
 In terms of handbag identification, I built CNN model based on pretrained ResNet_50 and retrain all weights using branded handbag dataset and PyTorch. <br> 
-```python train.py```<br>
+```
+python train.py
+```
 ### Application 
 
