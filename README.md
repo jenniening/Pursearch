@@ -12,7 +12,7 @@ User can shoose different price and retailer for handbag recommendation.<br>
 First row shows the input image and cropped handbag image. Handbag identification results and Top3 handbags based on similarity and users' choices have been provided. <br>
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pursearchresult.png" width="771" ></img>
 ## 2. Pipeline 
-<img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pipeline.png" width="771">
+<img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pipeline.png" width="771"></img>
 ### Dataset Prepartion
 Dataset includes two parts: branded handbag dataset and retailer handbag dataset<br>
 #### Branded Handbag Dataset:
