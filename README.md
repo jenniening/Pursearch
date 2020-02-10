@@ -13,3 +13,4 @@ First row shows the input image and cropped handbag image. Handbag identificatio
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pursearchresult.png" width="771" ></img>
 ## 2. Pipeline 
 <img src="https://github.com/jenniening/Pursearch/blob/master/demo/Pipeline.png" width="771">
+
