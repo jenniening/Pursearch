@@ -17,19 +17,19 @@ First row shows the input image and cropped handbag image. Handbag identificatio
 ### Data Source
 Dataset includes two parts: branded handbag dataset and retailer handbag dataset<br> 
 **Branded handbag dataset** includes 5k+ images with 6 most popular handbag brands and 18 different styles of handbags scrapped from **Google search results**. <br> **Retailer handbag dataset** includes images and other information of 101 brands and 3k+ styles of handbags scrapped from **Saks Fifth Avenue** and **Shein**. 
+### Create Environments and Install Packags
+
 ### Training Models 
 All scripts are in ```src``` folder<br>
-To preprocess the data, I used faster_rcnn model trained by COCO dataset using Tensorflow to detect handbag from original image.<br>
-```
-python preprocessing.py
-```
-In terms of handbag identification, I built CNN model based on pretrained ResNet_50 and retrain all weights using branded handbag dataset and PyTorch. <br> 
+To preprocess the data, I used faster_rcnn model trained by COCO dataset using Tensorflow to detect handbag from original image (preprocess.py) .<br>
+In terms of handbag identification, I built CNN model based on pretrained ResNet_50 and retrain all weights using branded handbag dataset and PyTorch. <br> To train the model:
 ```
 python train.py
 ```
-### Build Application
-I used Falsk to build application. 
+### Test Application
+Application can be run locally by running following command: 
 ```
 python app.py
 ```
+
 
