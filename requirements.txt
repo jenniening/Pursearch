@@ -1,0 +1,7 @@
+Flask
+tensorflow
+pandas
+torch
+torchvision
+Werkzeug
+scikit-learn
